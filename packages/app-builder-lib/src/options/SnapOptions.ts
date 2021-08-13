@@ -23,6 +23,12 @@ export interface SnapOptions extends CommonLinuxOptions, TargetSpecificOptions {
    * @default stable
    */
   readonly grade?: "devel" | "stable" | null
+  
+  /**
+    * A base snap is a special kind of snap that provides a run-time environment with a minimal set of libraries that are common to most applications. They’re transparent to users, but they need to be considered and specified when building a snap.
+    * @default core18
+    */
+  readonly base?: "core20" | "core18" | "core" | "bare" | null
 
   /**
    * The list of features that must be supported by the core in order for this snap to install.
